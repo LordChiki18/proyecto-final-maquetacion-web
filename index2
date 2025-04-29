@@ -1,0 +1,14 @@
+function crearGoogleSheetDesdeAppsScript() {
+  // Nombre de la nueva hoja
+  const nombrePlanilla = "Mi nueva hoja de cálculo";
+
+  // Crear una nueva hoja de cálculo
+  const nuevaPlanilla = SpreadsheetApp.create(nombrePlanilla);
+
+  // Obtener el enlace de la hoja creada
+  const enlacePlanilla = nuevaPlanilla.getUrl();
+
+  // Mostrar mensaje de éxito
+  Logger.log(`Hoja de cálculo creada exitosamente. Enlace: ${enlacePlanilla}`);
+  Browser.msgBox(`Hoja de cálculo creada exitosamente. Enlace: ${enlacePlanilla}`);
+}
